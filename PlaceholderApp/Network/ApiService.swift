@@ -50,13 +50,31 @@ final class ApiClient: NetworkServiceProtocol {
     func getTodoDate(completion: @escaping (Result<[ToDo], NetworkError>) -> Void) {
         guard let url = URL(string: Endpoints.ToDos.todos) else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
+            if error != nil {
                 completion(.failure(.emptyData))
                 return
             }
             if let data = data {
                 do {
                     let todo = try JSONDecoder().decode([ToDo].self, from: data)
+                    completion(.success(todo))
+                } catch {
+                    completion(.failure(.wrongJson))
+                }
+            }
+        }.resume()
+    }
+
+    func getPhotosDate(completion: @escaping (Result<[Photo], NetworkError>) -> Void) {
+        guard let url = URL(string: Endpoints.Photos.photos) else { return }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if error != nil {
+                completion(.failure(.emptyData))
+                return
+            }
+            if let data = data {
+                do {
+                    let todo = try JSONDecoder().decode([Photo].self, from: data)
                     completion(.success(todo))
                 } catch {
                     completion(.failure(.wrongJson))

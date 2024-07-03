@@ -5,6 +5,7 @@ final class TabBarController: UITabBarController {
         case posts
         case albums
         case todos
+        case photos
 
         var title: String {
             switch self {
@@ -14,6 +15,8 @@ final class TabBarController: UITabBarController {
                 return "Albums"
             case .todos:
                 return "Todos"
+            case .photos:
+                return "Photos"
             }
         }
 
@@ -25,6 +28,8 @@ final class TabBarController: UITabBarController {
                 return "square.stack.fill"
             case .todos:
                 return "list.bullet.clipboard.fill"
+            case .photos:
+                return "photo.circle"
             }
         }
     }
@@ -35,7 +40,7 @@ final class TabBarController: UITabBarController {
     }
 
     private func setupTabBar() {
-        let dataSource: [TabBarItem] = [.posts, .albums, .todos]
+        let dataSource: [TabBarItem] = [.posts, .albums, .todos, .photos]
         self.viewControllers = dataSource.map {
             switch $0 {
             case .posts:
@@ -46,6 +51,9 @@ final class TabBarController: UITabBarController {
                 return self.wrappedInNavigationController(with: usersViewController, title: $0.title)
             case .todos:
                 let usersViewController = ToDosViewController()
+                return self.wrappedInNavigationController(with: usersViewController, title: $0.title)
+            case .photos:
+                let usersViewController = PhotosViewController()
                 return self.wrappedInNavigationController(with: usersViewController, title: $0.title)
             }
         }

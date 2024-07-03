@@ -13,4 +13,8 @@ struct Endpoints {
     struct ToDos {
         static let todos: String = "\(BASE_URL)/todos"
     }
+
+    struct Photos {
+        static let photos: String = "\(BASE_URL)/photos"
+    }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81193E832C346EE0003298A9 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81193E822C346EE0003298A9 /* PhotosViewController.swift */; };
+		81193E852C352BF5003298A9 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81193E842C352BF5003298A9 /* PhotosModel.swift */; };
+		81193EBA2C353D72003298A9 /* PhotoNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81193EB92C353D72003298A9 /* PhotoNetwork.swift */; };
+		81193EE02C354BAA003298A9 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81193EDF2C354BAA003298A9 /* PhotosTableViewCell.swift */; };
 		81DE7E122C2861C000BDF397 /* AlbumsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE7E112C2861C000BDF397 /* AlbumsModel.swift */; };
 		81DE7E152C28622900BDF397 /* ToDosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE7E142C28622900BDF397 /* ToDosModel.swift */; };
 		81DE7E1C2C28639D00BDF397 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE7E1B2C28639D00BDF397 /* Endpoints.swift */; };
@@ -22,7 +26,24 @@
 		8E360B6D270F36D00034C4F3 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E360B6C270F36D00034C4F3 /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		81193ECB2C354701003298A9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		81193E822C346EE0003298A9 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		81193E842C352BF5003298A9 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
+		81193EB92C353D72003298A9 /* PhotoNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoNetwork.swift; sourceTree = "<group>"; };
+		81193EDF2C354BAA003298A9 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
 		81DE7E112C2861C000BDF397 /* AlbumsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsModel.swift; sourceTree = "<group>"; };
 		81DE7E142C28622900BDF397 /* ToDosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDosModel.swift; sourceTree = "<group>"; };
 		81DE7E1B2C28639D00BDF397 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -51,12 +72,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81193EB62C353A4A003298A9 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				81193EB92C353D72003298A9 /* PhotoNetwork.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		81193ECC2C3547BC003298A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81193EF22C359492003298A9 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				81193EDF2C354BAA003298A9 /* PhotosTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		81DE7E102C2861AC00BDF397 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				8E360B68270F2EEA0034C4F3 /* PostsModel.swift */,
 				81DE7E112C2861C000BDF397 /* AlbumsModel.swift */,
 				81DE7E142C28622900BDF397 /* ToDosModel.swift */,
+				81193E842C352BF5003298A9 /* PhotosModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -77,6 +122,8 @@
 				8E360B58270F2ED00034C4F3 /* PostsViewController.swift */,
 				81DE7E1E2C28650400BDF397 /* AlbumsViewController.swift */,
 				81DE7E222C2867FE00BDF397 /* ToDosViewController.swift */,
+				81193E822C346EE0003298A9 /* PhotosViewController.swift */,
+				81193EF22C359492003298A9 /* TableView */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -84,6 +131,7 @@
 		81DE7E1A2C2862CC00BDF397 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				81193EB62C353A4A003298A9 /* Photo */,
 				81DE7E2A2C28779F00BDF397 /* NetworkErrors.swift */,
 				81DE7E1B2C28639D00BDF397 /* Endpoints.swift */,
 				8E360B6C270F36D00034C4F3 /* ApiService.swift */,
@@ -96,6 +144,7 @@
 			children = (
 				8E360B53270F2ED00034C4F3 /* PlaceholderApp */,
 				8E360B52270F2ED00034C4F3 /* Products */,
+				81193ECC2C3547BC003298A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,12 +179,15 @@
 				8E360B4D270F2ED00034C4F3 /* Sources */,
 				8E360B4E270F2ED00034C4F3 /* Frameworks */,
 				8E360B4F270F2ED00034C4F3 /* Resources */,
+				81193ECB2C354701003298A9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PlaceholderApp;
+			packageProductDependencies = (
+			);
 			productName = UiKitRestApiApp;
 			productReference = 8E360B51270F2ED00034C4F3 /* PlaceholderApp.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +216,8 @@
 				Base,
 			);
 			mainGroup = 8E360B48270F2ED00034C4F3;
+			packageReferences = (
+			);
 			productRefGroup = 8E360B52270F2ED00034C4F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -189,7 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81193EBA2C353D72003298A9 /* PhotoNetwork.swift in Sources */,
+				81193E852C352BF5003298A9 /* PhotosModel.swift in Sources */,
 				81DE7E232C2867FE00BDF397 /* ToDosViewController.swift in Sources */,
+				81193E832C346EE0003298A9 /* PhotosViewController.swift in Sources */,
+				81193EE02C354BAA003298A9 /* PhotosTableViewCell.swift in Sources */,
 				8E360B59270F2ED00034C4F3 /* PostsViewController.swift in Sources */,
 				81DE7E1F2C28650400BDF397 /* AlbumsViewController.swift in Sources */,
 				8E360B6D270F36D00034C4F3 /* ApiService.swift in Sources */,
@@ -391,7 +449,7 @@
 				8E360B64270F2ED00034C4F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		8E360B65270F2ED00034C4F3 /* Build configuration list for PBXNativeTarget "PlaceholderApp" */ = {
 			isa = XCConfigurationList;
@@ -400,7 +458,7 @@
 				8E360B67270F2ED00034C4F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
