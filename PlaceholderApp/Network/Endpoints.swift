@@ -1,20 +1,6 @@
 struct Endpoints {
-    static let BASE_URL = "https://jsonplaceholder.typicode.com/"
-
-    struct Albums {
-        static let albums: String = "\(BASE_URL)/albums"
-    }
-
-
-    struct Posts {
-        static let posts: String = "\(BASE_URL)/posts"
-    }
-
-    struct ToDos {
-        static let todos: String = "\(BASE_URL)/todos"
-    }
-
-    struct Photos {
-        static let photos: String = "\(BASE_URL)/photos"
-    }
+    static let albums: String = "\(NetworkManager.shared().baseURL)/albums"
+    static let posts: String = "\(NetworkManager.shared().baseURL)/posts"
+    static let todos: String = "\(NetworkManager.shared().baseURL)/todos"
+    static let photos: String = "\(NetworkManager.shared().baseURL)/photos"
 }
