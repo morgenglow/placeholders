@@ -12,7 +12,7 @@ final class ApiClient: NetworkServiceProtocol {
     static let shared = ApiClient()
 
     func getPostDate(completion: @escaping (Result<[Post], NetworkError>) -> Void) {
-        guard let url = URL(string: Endpoints.Posts.posts) else { return }
+        guard let url = URL(string: Endpoints.posts) else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
             if response == nil {
                 completion(.failure(.emptyData))
@@ -30,7 +30,7 @@ final class ApiClient: NetworkServiceProtocol {
     }
 
     func getAlbumDate(completion: @escaping (Result<[Albums], NetworkError>) -> Void) {
-        guard let url = URL(string: Endpoints.Albums.albums) else { return }
+        guard let url = URL(string: Endpoints.albums) else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
             if response == nil {
                 completion(.failure(.emptyData))
@@ -48,7 +48,7 @@ final class ApiClient: NetworkServiceProtocol {
     }
 
     func getTodoDate(completion: @escaping (Result<[ToDo], NetworkError>) -> Void) {
-        guard let url = URL(string: Endpoints.ToDos.todos) else { return }
+        guard let url = URL(string: Endpoints.todos) else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
             if error != nil {
                 completion(.failure(.emptyData))
@@ -66,7 +66,7 @@ final class ApiClient: NetworkServiceProtocol {
     }
 
     func getPhotosDate(completion: @escaping (Result<[Photo], NetworkError>) -> Void) {
-        guard let url = URL(string: Endpoints.Photos.photos) else { return }
+        guard let url = URL(string: Endpoints.photos) else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
             if error != nil {
                 completion(.failure(.emptyData))

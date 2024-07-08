@@ -45,12 +45,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Photos", for: indexPath) as! PhotosViewCell
         let photo = photo[indexPath.row]
-        cell.configure(with:
-                .init(
-                    title: String(photo.id),
-                    description: photo.title,
-                    imagePath: photo.url)
-        )
+        cell.configure(with: photo)
         return cell
     }
 

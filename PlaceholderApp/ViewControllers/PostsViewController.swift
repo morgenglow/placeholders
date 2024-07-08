@@ -4,6 +4,7 @@ class PostsViewController: UIViewController, UITableViewDataSource {
 
     var post = [Post]()
     var tableView: UITableView!
+    let storage = Defaults() // facade
 
     override func loadView() {
             super.loadView()
@@ -48,10 +49,12 @@ class PostsViewController: UIViewController, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Post", for: indexPath)
-        let post = post[indexPath.row]
-        cell.textLabel?.text = post.title
-        cell.detailTextLabel?.text = post.body
+        let posted = post[indexPath.row]
+        cell.textLabel?.text = posted.title
+        cell.detailTextLabel?.text = posted.body
         cell.backgroundColor = .systemGray
+        storage[posted.title] = posted.body // facade
+        print(posted.title) // facade
         return cell
     }
 }
