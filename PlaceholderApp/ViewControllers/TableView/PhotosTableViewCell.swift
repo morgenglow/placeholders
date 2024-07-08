@@ -54,12 +54,10 @@ final class PhotosViewCell: UITableViewCell {
         cellImageView.image = nil
     }
 
-    func configure(with model: DemoCellModel) {
+    func configure(with model: Photo) {
         titleTextLabel.text = model.title
         descriptionTextLabel.text = model.description
-        if let imageURL = model.imagePath {
-            cellImageView.imageFromServerURL(URLString: imageURL, placeHolder: nil)
-        }
+        cellImageView.imageFromServerURL(URLString: model.imagePath , placeHolder: nil)
         updateConstraints()
     }
 }

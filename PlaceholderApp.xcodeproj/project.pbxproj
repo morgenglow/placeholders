@@ -13,6 +13,7 @@
 		81193EE02C354BAA003298A9 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81193EDF2C354BAA003298A9 /* PhotosTableViewCell.swift */; };
 		81193EF42C36DA10003298A9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81193EF32C36DA10003298A9 /* NetworkManager.swift */; };
 		81193EF62C36DBEF003298A9 /* CommentModelWithPrototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81193EF52C36DBEF003298A9 /* CommentModelWithPrototype.swift */; };
+		81193EF92C3BEC10003298A9 /* UserDefaultsFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81193EF82C3BEC10003298A9 /* UserDefaultsFacade.swift */; };
 		81DE7E122C2861C000BDF397 /* AlbumsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE7E112C2861C000BDF397 /* AlbumsModel.swift */; };
 		81DE7E152C28622900BDF397 /* ToDosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE7E142C28622900BDF397 /* ToDosModel.swift */; };
 		81DE7E1C2C28639D00BDF397 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE7E1B2C28639D00BDF397 /* Endpoints.swift */; };
@@ -48,6 +49,7 @@
 		81193EDF2C354BAA003298A9 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
 		81193EF32C36DA10003298A9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		81193EF52C36DBEF003298A9 /* CommentModelWithPrototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModelWithPrototype.swift; sourceTree = "<group>"; };
+		81193EF82C3BEC10003298A9 /* UserDefaultsFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsFacade.swift; sourceTree = "<group>"; };
 		81DE7E112C2861C000BDF397 /* AlbumsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsModel.swift; sourceTree = "<group>"; };
 		81DE7E142C28622900BDF397 /* ToDosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDosModel.swift; sourceTree = "<group>"; };
 		81DE7E1B2C28639D00BDF397 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		81193EF72C3BEBF2003298A9 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				81193EF82C3BEC10003298A9 /* UserDefaultsFacade.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		81DE7E102C2861AC00BDF397 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		81DE7E192C2862BD00BDF397 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				81193EF72C3BEBF2003298A9 /* UserDefaults */,
 				8E360B58270F2ED00034C4F3 /* PostsViewController.swift */,
 				81DE7E1E2C28650400BDF397 /* AlbumsViewController.swift */,
 				81DE7E222C2867FE00BDF397 /* ToDosViewController.swift */,
@@ -255,6 +266,7 @@
 				81193E832C346EE0003298A9 /* PhotosViewController.swift in Sources */,
 				81193EE02C354BAA003298A9 /* PhotosTableViewCell.swift in Sources */,
 				8E360B59270F2ED00034C4F3 /* PostsViewController.swift in Sources */,
+				81193EF92C3BEC10003298A9 /* UserDefaultsFacade.swift in Sources */,
 				81193EF62C36DBEF003298A9 /* CommentModelWithPrototype.swift in Sources */,
 				81DE7E1F2C28650400BDF397 /* AlbumsViewController.swift in Sources */,
 				8E360B6D270F36D00034C4F3 /* ApiService.swift in Sources */,
