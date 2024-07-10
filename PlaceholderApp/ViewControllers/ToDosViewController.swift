@@ -53,6 +53,7 @@ class ToDosViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = todo.title
         cell.detailTextLabel?.text = completed + " by user " + String(todo.userId)
         cell.backgroundColor = .systemGray5
+        todo.printData()
         return cell
     }
 
