@@ -1,7 +1,7 @@
 import UIKit
 
 class AlbumsViewController: UIViewController, UITableViewDataSource {
-    var album = [Albums]()
+    var albums = [Albums]()
     weak var albumTable: UITableView!
 
     override func loadView() {
@@ -27,11 +27,11 @@ class AlbumsViewController: UIViewController, UITableViewDataSource {
     }
 
     private func getAlbums() {
-        ApiClient.shared.getAlbumDate { [weak self] (album) in
+        ApiClient.shared.getAlbumDate { [weak self] (albums) in
             guard let self = self else { return }
-            switch album {
+            switch albums {
             case let .success(data):
-                self.album = data
+                self.albums = data
             case let .failure(error):
                 print(error.localizedDescription)
             }
@@ -42,14 +42,15 @@ class AlbumsViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return album.count
+        return albums.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Album", for: indexPath)
-        let album = album[indexPath.row]
+        let album = albums[indexPath.row]
         cell.textLabel?.text = String(album.id)
         cell.detailTextLabel?.text = album.title
+        Albums.printEachItemTitle(array: albums) // iterator
         cell.backgroundColor = .systemGray
         return cell
     }
